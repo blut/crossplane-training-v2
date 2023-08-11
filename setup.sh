@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# install kind
-[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
-chmod +x kind 
-./kind create cluster
+kind create cluster
 
 # install crossplane on kind
 helm repo add crossplane-stable https://charts.crossplane.io/stable
